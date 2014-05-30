@@ -1,0 +1,355 @@
+/*--------------------------------- Reset -------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,image
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration:none;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+body{
+    background-color: #F1F4F9;
+    font-family: 'Lato',Verdana,Helvetica,cursive,sans-serif;
+    color: #4a4a4a;
+    font-size:1em;
+}
+
+/*--------------------------------- Class --------------------------------------*/
+.iblock{
+    display: inline-block;
+    vertical-align: top;
+}
+.conteneur{
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+}
+.img{
+    max-width: 100%;
+    display: block;
+}
+.clear{
+    clear: both;
+}
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+/*--------------------------------- Générale -------------------------------------*/
+h1 {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/*--------------------------------- Header ---------------------------------------*/
+header {
+    background-color: #C2C4C7;
+    padding: 0.5em 0;
+}
+.left {
+    width: 24%;
+}
+.left >.logo {
+    display: block;
+    width: 25%;
+    min-width:58px;
+}
+.part1 {
+    width: 80%;
+}
+.part1>h1{
+    height:0;
+    overflow:hidden;
+}
+#search {
+    width: 100%;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 0.2em;
+}
+#search>.loupe {
+    background: url(../images/loupe.png) no-repeat center center;
+    width: 10%;
+    height: 32px;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+}
+.search_data {
+    outline: 0;
+    border: 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    height: 32px;
+    width: 87%;
+    color: #666666;
+    margin: 0;
+    padding-left: 1.7%;
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+    border-right: solid 1px #EFECCA;
+}
+.right{
+    width: 76%;
+    padding-top: 1.1em;
+}
+.part2 {
+    width: 20%;
+}
+.part2>.connect {
+    text-align: center;
+    padding: 0.5em 0;
+    width: 52%;
+    font-weight: 300;
+    color: #fff;
+    float: right;
+    background-color: #F7931E;
+}
+.part2>.connect:after{
+    clear:both;
+}
+
+/*------------------------------ Menu principal -------------------------------------*/
+#menu {
+    position:relative;
+    width:100%;
+    max-height: 48px;
+}
+#barre{
+    background-color: #7B7B7B;
+    height: 48px;
+    width: 100%;
+}
+#page_actuel{
+    background-color:#7B7B7B;
+    width:220px;
+}
+#nav_site{
+    float:right;
+}
+#btn_nav {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+#btn_nav:after{
+    clear: both;
+}
+#nav_cache {
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height:0;
+    overflow:hidden;
+    z-index: 1500;
+    transition: height 0.3s ease;
+}
+#nav_cache>ul{
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    font-size: 1.1em;
+    text-align: center;
+}
+#nav_cache>ul>li {
+    display: block;
+}
+#nav_cache>ul>li>a {
+    display: block;
+    font-weight: 300;
+    color: #FFFFFF;
+    padding: 0.7em 0;
+    background-color: #F7931E;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease;
+    border-bottom:solid 1px #F7A142;
+}
+#nav_cache>ul>li:last-child>a{
+    border-bottom: none;
+}
+#nav_cache>ul>li>a:hover {
+    background-color: #FF7B00;
+}
+/*-------------------------------- Sidebar ---------------------------------------*/
+.sidebar {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: medium none;
+    min-width: 200px;
+    width:  20.4%;
+}
+.alt-nav>li {
+    line-height: normal;
+    padding: 0;
+    left: 0;
+    opacity: 1;
+}
+.menu-link {
+    display: block;
+    height: 48px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 200px !important;
+}
+.hover {
+    display: table;
+    height: 48px;
+    position: absolute;
+    width: 220px;
+}
+.icon-container {
+    display: table-cell;
+    height: 48px;
+    position: absolute;
+    width: 65px;
+}
+.icon {
+    display: block;
+    height: 26px;
+    margin: 11px 0 0 27px;
+    width: 26px; 
+    display: block;
+}
+.title {
+    color: #333333;
+    display: table-cell;
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 56px;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 145px;
+}
+/* Nav_index style */
+#nav_index .icon-container{
+    background-color: #1AA1E1;
+}
+#nav_index .icon{
+    background-image: url(../images/book.png);
+}
+/* Nav_book style */
+#nav_book .icon-container{
+    background-color: #1AA1E1;
+}
+#nav_book .icon{
+    background-image: url(../images/book.png);
+}
+/* Nav_movie style */
+#nav_movie .icon-container{
+    background-color: #CE5043;
+}
+#nav_movie .icon{
+    background-image: url(../images/movie.png);
+}
+/* Nav_game style */
+#nav_game .icon-container{
+    background-color: #B3C833;
+}
+#nav_game .icon{
+    background-image: url(../images/gaming.png);
+}
+/* Nav_party style */
+#nav_party .icon-container{
+    background-color: #FB8521;
+}
+#nav_party .icon{
+    background-image: url(../images/party.png);
+}
+/* Nav_school style */
+#nav_school .icon-container{
+    background-color: #658092;
+}
+#nav_school .icon{
+    background-image: url(../images/book.png);
+}
+#page_actuel{
+    cursor:default;
+}
+#page_actuel .title{
+    color: #fff;
+}
+/* Effet hover menu */
+#nav_index .title:hover {
+    color: #FFFFFF;
+    background-color: #1AA1E1;
+}
+#nav_book .title:hover {
+    color: #FFFFFF;
+    background-color: #1AA1E1;
+}
+#nav_movie .title:hover {
+    color: #FFFFFF;
+    background-color: #CE5043;
+}
+#nav_game .title:hover {
+    color: #FFFFFF;
+    background-color: #B3C833;
+}
+#nav_party .title:hover {
+    color: #FFFFFF;
+    background-color: #FB8521;
+}
+#nav_school .title:hover {
+    color: #FFFFFF;
+    background-color: #658092;
+}
+
+/*---------------------------------- Footer --------------------------------------*/
+.titre {
+    font-size: 1.45em;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 5px 0 20px 0;
+}
+footer {
+    background-color: #C2C4C7;
+    bottom: 0;
+    padding: 4% 0;
+}
+.colonne {
+    width: 25%;
+}
+.colonne>ul>li {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+.colonne>ul>li:first-child{
+    line-height: 1.4em;
+}
+.colonne>ul>li>a {
+    color: #FFFFFF;
+    font-weight: 300;
+    text-decoration: none;
+    white-space: nowrap;
+}
